@@ -22,9 +22,12 @@ public class FactoryManager<T>
         }
     }
 
-    public FactoryManager(Class<?> parentClass) {
-        if (parentClass == null) return;
-        scanForAnnotations(parentClass);
+    public FactoryManager(Class<?>... parentClasses) {
+        if (parentClasses.length == 0) return;
+        for (Class<?> clazz : parentClasses)
+        {
+            scanForAnnotations(clazz);
+        }
     }
 
     @SuppressWarnings("unchecked")
