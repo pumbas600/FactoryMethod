@@ -5,9 +5,9 @@ import java.util.HashMap;
 
 public class FactoryManager<T>
 {
-    private static HashMap<String, Class<?>> subClasses = new HashMap<>();
+    private HashMap<String, Class<?>> subClasses = new HashMap<>();
 
-    private static void scanForAnnotations(Class<?> clazz){
+    private void scanForAnnotations(Class<?> clazz){
         for (Class<?> subClass : clazz.getDeclaredClasses()) {
             if (!subClass.isAnnotationPresent(FactoryType.class)) continue;
             FactoryType factoryType = subClass.getAnnotation(FactoryType.class);
