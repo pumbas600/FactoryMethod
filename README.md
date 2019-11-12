@@ -7,7 +7,7 @@ different Factory Method Patterns into your code.
 
 **Note:** All classes involved in this process must be public or package-private.
 
-Begin by constructing a parent **class** which will be used by all following child classes in the pattern.
+Begin by constructing a parent class which will be extended by all following child classes in the pattern.
 
 ``` java
 public abstract class AttackBase
@@ -21,10 +21,10 @@ public abstract class AttackBase
 }
 ```
 
-Next, create as many child classes as you want, extending your parent class, however, they must be nested within another
-class, be annotated with the *@FactoryType* annotation and have a constructor with no parameters.
+Next, create as many child classes as you want extending your parent class, however, they must be nested within another
+class, be annotated with the *@FactoryType* annotation and have a constructor with no parameters. Note they don't all need to be nested within the same class.
 
-There are 2 optional parameters to this annotation:
+There are 2 optional parameters for the @FactoryType annotation:
 
 ***enabled*** - *default:* true. 
 
