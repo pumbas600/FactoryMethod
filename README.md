@@ -86,4 +86,4 @@ AttackBase slash = attackFactoryManager.getClass("Slash");
 thrust.doAttack();
 slash.doAttack();
 ```
-
+This allows new subclasses to be easily added to the AttackTypes class without having to rework the factory manager.
